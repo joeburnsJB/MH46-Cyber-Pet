@@ -17,6 +17,12 @@ class Pet {
         this.name = name;
     }
 
+    update() {
+        this.hunger += (1 * this.hungerMod);
+        this.energy -= (1 * this.energyMod);
+        
+    }
+
     eat() {
         if (this.hunger > 40) {
             this.hunger -= 40;
