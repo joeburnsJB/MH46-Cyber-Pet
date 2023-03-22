@@ -1,5 +1,5 @@
 // subclass for dragon pet
-import Pet from "./pet.js";
+import "./pet.js";
 
 class Dragon extends Pet {
     

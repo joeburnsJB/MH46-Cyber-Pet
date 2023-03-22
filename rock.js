@@ -1,5 +1,5 @@
 // subclass for rock pet
-import Pet from "./pet.js";
+import "./pet.js";
 
 class Rock extends Pet {
     
