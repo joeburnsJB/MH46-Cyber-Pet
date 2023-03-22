@@ -1,11 +1,10 @@
-class Pet {
-    constructor() {
-        this.health = 100;
-        this.hunger = 0;
-        this.happiness = 50;
-    }
-}
+// import pet subclasses
+import "./rock.js";
+import "./cat.js";
+import "./dragon.js";
 
-// import pet sublclasses
-// main game update function
 // game state object
+
+
+// main game update function
+
