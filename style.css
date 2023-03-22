@@ -1,0 +1,25 @@
+.title
+{
+    font-family:verdana;
+    font-size:7vh;
+    color:orange;
+    text-shadow:-2px -2px red;
+    text-align:center;
+}
+.button-nav
+{
+    border:solid 3px orange;
+    border-radius:50%;
+    background-color:red;
+    color:orange;
+    height:7vw;
+    width:7vw;
+    cursor:pointer;
+}
+.button-nav:hover
+{
+    border-color:red;
+    background-color:orange;
+    color:red;
+}
+.p
