@@ -1,14 +1,15 @@
 class Pet {
     asleep = false;
+    health = 100;
+    hunger = 0;
+    happiness = 50;
+    bond = 0;
+    energy = 100;
+    hygiene = 100;
     
     constructor(name) {
         this.name = name;
-        this.health = 100;
-        this.hunger = 0;
-        this.happiness = 50;
-        this.bond = 0;
-        this.energy = 100;
-        this.hygiene = 100;
+        
     }
 
     eat() {
