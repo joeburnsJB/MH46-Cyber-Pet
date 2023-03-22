@@ -3,14 +3,30 @@ import "./rock.js";
 import "./cat.js";
 import "./dragon.js";
 
+const tickLength = 10000;
+
 // game state object
 const gameState = {
-    initialise (petType) {
-        // code to set up the game state when a pet is chosen
+    pet: {},
+    
+    initialise (petType, petName) {
+        switch (petType) {
+            case "Rock":
+                this.pet = new Rock(petName);
+                break;
+            case "Cat":
+                this.pet = new Cat(petName);
+                break;
+            case "Dragon":
+                this.pet = new Dragon(petName);
+                break;
+        }
+
+        setInterval(this.tick(), tickLength);
     },
 
     tick () {
-        // code to periodically update the game state
+        this.pet.update();
     },
 
     input (event) {
