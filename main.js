@@ -1,14 +1,12 @@
 // import pet subclasses
-import "./modules/rock.js";
-import "./modules/cat.js";
-import "./modules/dragon.js";
+import Rock from "./modules/rock.js";
+import Cat from "./modules/cat.js";
+import Dragon from "./modules/dragon.js";
 
 const tickLength = 10000;
 
 // game state object
 const gameState = {
-    pet: {},
-    
     initialise (petType, petName) {
         switch (petType) {
             case "Rock":

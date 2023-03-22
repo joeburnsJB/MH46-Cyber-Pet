@@ -21,6 +21,7 @@ export default class Pet {
         this.hunger += (1 * this.hungerMod);
         this.energy -= (1 * this.energyMod);
         
+        console.log(this);
     }
 
     eat() {
@@ -61,5 +62,9 @@ export default class Pet {
 
     kill() {
         // when health reaches 0, die
+    }
+
+    test() {
+        console.log("please work");
     }
 }

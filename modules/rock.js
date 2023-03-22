@@ -1,6 +1,6 @@
 // subclass for rock pet
 import Pet from "./pet.js";
 
-class Rock extends Pet {
+export default class Rock extends Pet {
     
 }
