@@ -1,4 +1,6 @@
 class Pet {
+    asleep = false;
+    
     constructor(name) {
         this.name = name;
         this.health = 100;
@@ -31,8 +33,10 @@ class Pet {
     }
 
     sleep() {
-        // when energy hit 0, goes to sleep
-        // lasts a random amount of time within a range (e.g. between 10-15 mins)
+        this.asleep = true;
+        setTimeout(() => {
+            this.asleep = false;
+        }, (Math.floor((Math.random() * 30000) + 60000)));
     }
 
     defecate() {
