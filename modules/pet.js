@@ -1,4 +1,4 @@
-class Pet {
+export default class Pet {
     asleep = false;
     health = 100;
     hunger = 0;

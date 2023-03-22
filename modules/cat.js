@@ -1,5 +1,5 @@
 // subclass for cat pet
-import "./pet.js";
+import "./modules/pet.js";
 
 class Cat extends Pet {
     constructor(name) {

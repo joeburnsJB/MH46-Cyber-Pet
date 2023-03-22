@@ -1,7 +1,7 @@
 // import pet subclasses
-import "./rock.js";
-import "./cat.js";
-import "./dragon.js";
+import "./modules/rock.js";
+import "./modules/cat.js";
+import "./modules/dragon.js";
 
 const tickLength = 10000;
 
