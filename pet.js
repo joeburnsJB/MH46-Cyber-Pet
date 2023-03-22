@@ -6,6 +6,12 @@ class Pet {
     bond = 0;
     energy = 100;
     hygiene = 100;
+
+    hungerMod = 1;
+    happinessMod = 1;
+    bondMod = 1;
+    energyMod = 1;
+    hygieneMod = 1;
     
     constructor(name) {
         this.name = name;
