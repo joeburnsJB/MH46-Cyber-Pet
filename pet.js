@@ -18,7 +18,6 @@ class Pet {
         }
         // can put line here to change text in the HTML saying that the pet ate
         // for example --->  petMessage.textContent = `${this.name} ate!)`;
-        return this;
     }
 
     play() {
@@ -29,7 +28,6 @@ class Pet {
             this.happiness = 100;
         }
         // can put line here to change text in the HTML saying that the pet played
-        return this;
     }
 
     sleep() {
@@ -39,6 +37,10 @@ class Pet {
 
     defecate() {
         // random time after eating pet will defecate, will increase dirtiness levels
+    }
+
+    clean() {
+        this.hygiene = 100;
     }
 
     kill() {
