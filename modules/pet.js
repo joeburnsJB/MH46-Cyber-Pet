@@ -63,8 +63,4 @@ export default class Pet {
     kill() {
         // when health reaches 0, die
     }
-
-    test() {
-        console.log("please work");
-    }
 }
