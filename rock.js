@@ -1,0 +1,1 @@
+// subclass for rock pet
