@@ -9,7 +9,7 @@ const gameState = {
         // code to set up the game state when a pet is chosen
     },
 
-    update () {
+    tick () {
         // code to periodically update the game state
     },
 
