@@ -1,15 +1,30 @@
+var petName = document.getElementById("nameInput").value;
+
 class Pet {
     constructor(name) {
-        // set up basic stats
         this.name = name;
-        this.health = 100;
         this.hunger = 0;
-        this.happiness = 50;
+        this.happiness = 100;
     }
-
-    feedPet() {
-        // function to feed pet
+    eats() {
+        if (this.hunger > 40) {
+            this.hunger -= 40;
+        }
+        else {
+            this.hunger = 0;
+        }
+        // can put line here to change text in the HTML saying that the pet ate
+        // for example --->  petMessage.textContent = `${this.name} ate!)`;
+        return this;
     }
-
-    // any additional functions...
+    play() {
+        if (this.happiness < 80) {
+            this.happiness += 20
+        }
+        else {
+            this.happiness = 100
+        }
+        // can put line here to change text in the HTML saying that the pet played
+        return this;
+    }
 }
