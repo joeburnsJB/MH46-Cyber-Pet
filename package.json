@@ -1,0 +1,11 @@
+{
+  "name": "cyberpet-challenge",
+  "version": "1.0.0",
+  "description": "Cyber Pet challenge for codenation week 4",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josh Letts, Joseph Burns, Kim Wong, Damien Lewis",
+  "license": "ISC"
+}
