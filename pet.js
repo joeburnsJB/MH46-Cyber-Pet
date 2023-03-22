@@ -9,7 +9,6 @@ class Pet {
     
     constructor(name) {
         this.name = name;
-        
     }
 
     eat() {
