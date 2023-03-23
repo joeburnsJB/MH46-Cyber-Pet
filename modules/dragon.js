@@ -7,6 +7,13 @@ export default class Dragon extends Pet {
         this.greed = 0;
         this.anger = 0;
     }
+    
+    update() {
+        greedRoll = Math.floor(Math.random() * 2);
+        this.greed += greedRoll;
+        angerRoll = Math.floor(Math.random() * 3);
+        this.anger += angerRoll;
+    }
 
     hunt() {
         greedRoll = Math.floor(Math.random() * 20) + 1;
