@@ -78,5 +78,11 @@ petNameSubmit.addEventListener("click", () => {
 pet name: ${petNameInput.value}`);
     if (petSelection != "" && petNameInput.value != "") {
         gameState.initialise(petSelection, petNameInput.value);
+    } else if (petSelection === "" && petNameInput.value === "") {
+        alert("Please select a pet type and choose a name");
+    } else if (petSelection === "") {
+        alert("Please select a pet type");
+    } else if (petNameInput.value === "") {
+        alert("Please choose a name");
     }
 })
