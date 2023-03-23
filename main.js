@@ -25,10 +25,6 @@ const gameState = {
 
     tick () {
         this.pet.update();
-    },
-
-    input (event) {
-        // code to take user input from buttons and apply it to the game state
     }
 }
 
