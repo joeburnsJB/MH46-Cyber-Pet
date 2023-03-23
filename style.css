@@ -6,20 +6,93 @@
     text-shadow:-2px -2px red;
     text-align:center;
 }
-.button-nav
+
+.home
 {
-    border:solid 3px orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.home-button
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:solid 1vw orange;
     border-radius:50%;
     background-color:red;
     color:orange;
-    height:7vw;
-    width:7vw;
+    font-family:verdana;
+    font-size:2vw;
+    height:10vw;
+    width:10vw;
+    margin:5vw;
     cursor:pointer;
 }
-.button-nav:hover
+.home-button:hover
 {
     border-color:red;
     background-color:orange;
     color:red;
 }
-.p
+
+.home-image
+{
+    height:10vw;
+    width:10vw; 
+}
+
+.pet-button
+{
+    border:solid 0.3vw orange;
+    border-radius:1vw;
+    background-color:red;
+    color:orange;
+    font-family:verdana;
+    font-size:2vw;
+    width:20vw;
+    cursor:pointer;
+}
+.pet-button:hover
+{
+    border-color:red;
+    background-color:orange;
+    color:red;
+}
+
+.pet
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pet-speech
+{
+    border:solid 2px black;
+    height:10vh;
+    width:60vw
+}
+
+.pet-image
+{
+    border:solid 2px black;
+    height:50vh;
+    width:10vw
+}
+
+.pet-status
+{
+    border:solid 2px black;
+    height:35vh;
+    width:50vw
+}
+
+.pet-actions
+{
+    border:solid 2px black;
+    height:10vh;
+    width:50vw
+}
