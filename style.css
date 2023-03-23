@@ -43,6 +43,15 @@
     width:10vw; 
 }
 
+.home-name
+{
+    font-family:verdana;
+    font-size:3vh;
+    text-align:center;
+    margin:3vw;
+}
+
+
 .pet
 {
     display:flex;
@@ -96,7 +105,6 @@
     width:20vw;
     cursor:pointer;
 }
-
 .pet-button:hover
 {
     border-color:red;
