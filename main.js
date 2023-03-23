@@ -36,8 +36,8 @@ const gameState = {
                 break;
         }
 
-        let petFunctions = Object.getOwnPropertyNames(Object.getPrototypeOf(this.pet));
-        console.log(super);
+        let petFunctions = Object.getOwnPropertyNames(this.pet);
+        console.log(petFunctions);
 
         homeScreen.hidden = true;
         petScreen.hidden = false;
