@@ -48,7 +48,6 @@ const gameState = {
 // main game functions
 petSelectRock.addEventListener("click", () => {
     petSelection = "Rock";
-    console.log(petSelection);
 
     petSelectRock.style.filter = "none";
     petSelectCat.style.filter = "blur(5px)";
@@ -57,7 +56,6 @@ petSelectRock.addEventListener("click", () => {
 
 petSelectCat.addEventListener("click", () => {
     petSelection = "Cat";
-    console.log(petSelection);
 
     petSelectRock.style.filter = "blur(5px)";
     petSelectCat.style.filter = "none";
@@ -66,7 +64,6 @@ petSelectCat.addEventListener("click", () => {
 
 petSelectDragon.addEventListener("click", () => {
     petSelection = "Dragon";
-    console.log(petSelection);
 
     petSelectRock.style.filter = "blur(5px)";
     petSelectCat.style.filter = "blur(5px)";
@@ -74,8 +71,6 @@ petSelectDragon.addEventListener("click", () => {
 });
 
 petNameSubmit.addEventListener("click", () => {
-    console.log(`Selected pet: ${petSelection}
-pet name: ${petNameInput.value}`);
     if (petSelection != "" && petNameInput.value != "") {
         gameState.initialise(petSelection, petNameInput.value);
     } else if (petSelection === "" && petNameInput.value === "") {
@@ -85,4 +80,4 @@ pet name: ${petNameInput.value}`);
     } else if (petNameInput.value === "") {
         alert("Please choose a name");
     }
-})
+});
