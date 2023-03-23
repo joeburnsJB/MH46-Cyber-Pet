@@ -3,6 +3,9 @@ import Rock from "./modules/rock.js";
 import Cat from "./modules/cat.js";
 import Dragon from "./modules/dragon.js";
 
+const homeScreen = document.getElementById("home");
+const petScreen = document.getElementById("pet");
+
 const petSelectRock = document.getElementById("home-button-rock");
 const petSelectCat = document.getElementById("home-button-cat");
 const petSelectDragon = document.getElementById("home-button-dragon");
@@ -10,6 +13,9 @@ const petNameInput = document.getElementById("pet-name");
 const petNameSubmit = document.getElementById("pet-name-submit");
 
 let petSelection = "";
+
+homeScreen.hidden = false;
+petScreen.hidden = true;
 
 const tickLength = 10000;
 
@@ -27,6 +33,9 @@ const gameState = {
                 this.pet = new Dragon(petName);
                 break;
         }
+
+        homeScreen.hidden = true;
+        petScreen.hidden = false;
 
         setInterval(this.tick(), tickLength);
     },
@@ -63,3 +72,11 @@ petSelectDragon.addEventListener("click", () => {
     petSelectCat.style.filter = "blur(5px)";
     petSelectDragon.style.filter = "none";
 });
+
+petNameSubmit.addEventListener("click", () => {
+    console.log(`Selected pet: ${petSelection}
+pet name: ${petNameInput.value}`);
+    if (petSelection != "" && petNameInput.value != "") {
+        gameState.initialise(petSelection, petNameInput.value);
+    }
+})
