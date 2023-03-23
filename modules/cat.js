@@ -8,7 +8,10 @@ export default class Cat extends Pet {
         this.energy = 50;
         this.huntDesire = 0;
     }
-
+    update() {
+        this.huntDesire -= 1;
+        console.log(this);
+    }
     hunt() {
         if (this.huntDesire > 70) {
             this.diceRoll = Math.floor(Math.random() * 3) + 1;
