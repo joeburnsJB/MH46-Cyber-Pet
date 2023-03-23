@@ -6,15 +6,14 @@ export default class Pet {
     bond = 0;
     energy = 100;
     hygiene = 100;
+    poop = 0;
+    recentlyAte = false;
 
     hungerMod = 1;
     happinessMod = 1;
     bondMod = 1;
     energyMod = 1;
     hygieneMod = 1;
-    
-    recentlyAte = false;
-    poop = false;
 
     constructor(name) {
         this.name = name;
@@ -24,23 +23,22 @@ export default class Pet {
         if (this.hunger > 80 || this.hygiene < 20 || this.happiness < 20) {
             this.health -= 10;
         }
+
         if (this.asleep = true) {
             this.hunger += (0.5 * this.hungerMod);
-        }
-        else {
+        } else {
             this.energy -= (1 * this.energyMod);
             this.hunger += (1 * this.hungerMod);
         }
-        if (this.poop = true) {
-            this.hygene -= (3 * this.hygieneMod);
+
+        if (this.energy === 0) {
+            this.#sleep();
         }
-        else {
-            this.hygene -= (1 * this.hygieneMod);
-        }
+
+        this.hygene -= (1 * (this.hygieneMod * this.poop));
         this.happinessCalc = 1 / this.hunger;
         this.happinessCalc = this.happinessCalc * 100;
         this.happiness -= (this.happinessCalc * this.happinessMod);
-        console.log(this);
     }
 
     eat() {
@@ -65,7 +63,7 @@ export default class Pet {
         // can put line here to change text in the HTML saying that the pet played
     }
 
-    sleep() {
+    #sleep() {
         this.asleep = true;
         setTimeout(() => {
             this.energy = 100;
@@ -73,21 +71,21 @@ export default class Pet {
         }, (Math.floor((Math.random() * 30000) + 60000)));
     }
 
-    defecate() {
+    #defecate() {
         // random time after eating pet will defecate, will increase dirtiness levels
         // put an if statement in the tick handler that checks each tick if recentlyAte = true and calls this method if that's the case
         setTimeout(() => {
-            this.poop = true;
+            this.poop++;
         }, (Math.floor((Math.random() * 20000) + 20000)));
 
     }
 
     clean() {
         this.hygiene = 100;
-        this.poop = false;
+        this.poop = 0;
     }
 
-    kill() {
+    #kill() {
         if (health === 0) {
             // call HTML element that tells player the game is over
         }

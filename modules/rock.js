@@ -6,10 +6,12 @@ export default class Rock extends Pet {
         super(name);
         this.moss = 0;
     }
+
     update() {
         this.moss += 1;
         console.log(this);
     }
+
     play() {
         if (this.happiness < 80) {
             this.happiness += 20;
