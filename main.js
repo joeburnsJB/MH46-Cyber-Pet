@@ -38,14 +38,26 @@ const gameState = {
 petSelectRock.addEventListener("click", () => {
     petSelection = "Rock";
     console.log(petSelection);
+
+    petSelectRock.style.borderColor = "green";
+    petSelectCat.style.borderColor = "orange";
+    petSelectDragon.style.borderColor = "orange";
 });
 
 petSelectCat.addEventListener("click", () => {
     petSelection = "Cat";
     console.log(petSelection);
+
+    petSelectRock.style.borderColor = "orange";
+    petSelectCat.style.borderColor = "green";
+    petSelectDragon.style.borderColor = "orange";
 });
 
 petSelectDragon.addEventListener("click", () => {
     petSelection = "Dragon";
     console.log(petSelection);
+
+    petSelectRock.style.borderColor = "orange";
+    petSelectCat.style.borderColor = "orange";
+    petSelectDragon.style.borderColor = "green";
 });
