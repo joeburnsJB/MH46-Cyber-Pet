@@ -43,7 +43,6 @@
     width:10vw; 
 }
 
-
 .pet
 {
     display:flex;
@@ -97,6 +96,7 @@
     width:20vw;
     cursor:pointer;
 }
+
 .pet-button:hover
 {
     border-color:red;
