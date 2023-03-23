@@ -39,25 +39,25 @@ petSelectRock.addEventListener("click", () => {
     petSelection = "Rock";
     console.log(petSelection);
 
-    petSelectRock.style.borderColor = "green";
-    petSelectCat.style.borderColor = "orange";
-    petSelectDragon.style.borderColor = "orange";
+    petSelectRock.style.filter = "none";
+    petSelectCat.style.filter = "blur(5px)";
+    petSelectDragon.style.filter = "blur(5px)";
 });
 
 petSelectCat.addEventListener("click", () => {
     petSelection = "Cat";
     console.log(petSelection);
 
-    petSelectRock.style.borderColor = "orange";
-    petSelectCat.style.borderColor = "green";
-    petSelectDragon.style.borderColor = "orange";
+    petSelectRock.style.filter = "blur(5px)";
+    petSelectCat.style.filter = "none";
+    petSelectDragon.style.filter = "blur(5px)";
 });
 
 petSelectDragon.addEventListener("click", () => {
     petSelection = "Dragon";
     console.log(petSelection);
 
-    petSelectRock.style.borderColor = "orange";
-    petSelectCat.style.borderColor = "orange";
-    petSelectDragon.style.borderColor = "green";
+    petSelectRock.style.filter = "blur(5px)";
+    petSelectCat.style.filter = "blur(5px)";
+    petSelectDragon.style.filter = "none";
 });
