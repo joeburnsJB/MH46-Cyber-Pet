@@ -6,6 +6,8 @@ import Dragon from "./modules/dragon.js";
 const petSelectRock = document.getElementById("home-button-rock");
 const petSelectCat = document.getElementById("home-button-cat");
 const petSelectDragon = document.getElementById("home-button-dragon");
+const petNameInput = document.getElementById("pet-name");
+const petNameSubmit = document.getElementById("pet-name-submit");
 
 let petSelection = "";
 
