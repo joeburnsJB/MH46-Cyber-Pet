@@ -28,4 +28,5 @@ const gameState = {
     }
 }
 
-// main game update function
+// main game functions
+
