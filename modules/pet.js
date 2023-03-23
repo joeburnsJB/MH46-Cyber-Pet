@@ -44,8 +44,7 @@ export default class Pet {
     eat() {
         if (this.hunger > 40) {
             this.hunger -= 40;
-        }
-        else {
+        } else {
             this.hunger = 0;
         }
         // can put line here to change text in the HTML saying that the pet ate
@@ -56,8 +55,7 @@ export default class Pet {
     play() {
         if (this.happiness < 80) {
             this.happiness += 20;
-        }
-        else {
+        } else {
             this.happiness = 100;
         }
         // can put line here to change text in the HTML saying that the pet played
