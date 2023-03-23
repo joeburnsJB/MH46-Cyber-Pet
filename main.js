@@ -3,6 +3,12 @@ import Rock from "./modules/rock.js";
 import Cat from "./modules/cat.js";
 import Dragon from "./modules/dragon.js";
 
+const petSelectRock = document.getElementById("home-button-rock");
+const petSelectCat = document.getElementById("home-button-cat");
+const petSelectDragon = document.getElementById("home-button-dragon");
+
+let petSelection = "";
+
 const tickLength = 10000;
 
 // game state object
@@ -29,4 +35,29 @@ const gameState = {
 }
 
 // main game functions
+petSelectRock.addEventListener("click", () => {
+    petSelection = "Rock";
+    console.log(petSelection);
 
+    petSelectRock.style.borderColor = "green";
+    petSelectCat.style.borderColor = "orange";
+    petSelectDragon.style.borderColor = "orange";
+});
+
+petSelectCat.addEventListener("click", () => {
+    petSelection = "Cat";
+    console.log(petSelection);
+
+    petSelectRock.style.borderColor = "orange";
+    petSelectCat.style.borderColor = "green";
+    petSelectDragon.style.borderColor = "orange";
+});
+
+petSelectDragon.addEventListener("click", () => {
+    petSelection = "Dragon";
+    console.log(petSelection);
+
+    petSelectRock.style.borderColor = "orange";
+    petSelectCat.style.borderColor = "orange";
+    petSelectDragon.style.borderColor = "green";
+});
