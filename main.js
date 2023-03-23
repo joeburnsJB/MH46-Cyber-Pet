@@ -6,6 +6,8 @@ import Dragon from "./modules/dragon.js";
 const homeScreen = document.getElementById("home");
 const petScreen = document.getElementById("pet");
 
+const homeButton = document.getElementById("home-button");
+
 const petSelectRock = document.getElementById("home-button-rock");
 const petSelectCat = document.getElementById("home-button-cat");
 const petSelectDragon = document.getElementById("home-button-dragon");
@@ -81,3 +83,9 @@ petNameSubmit.addEventListener("click", () => {
         alert("Please choose a name");
     }
 });
+
+homeButton.addEventListener("click", () => {
+    homeScreen.hidden = false;
+    petScreen.hidden = true;
+    delete gameState.pet;
+})
