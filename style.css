@@ -43,24 +43,6 @@
     width:10vw; 
 }
 
-.pet-button
-{
-    border:solid 0.3vw orange;
-    border-radius:1vw;
-    background-color:red;
-    color:orange;
-    font-family:verdana;
-    font-size:2vw;
-    width:20vw;
-    cursor:pointer;
-}
-.pet-button:hover
-{
-    border-color:red;
-    background-color:orange;
-    color:red;
-}
-
 .pet
 {
     display:flex;
@@ -74,6 +56,12 @@
     border:solid 2px black;
     height:10vh;
     width:60vw
+}
+
+.pet-box
+{
+    display:flex;
+    flex-direction: row;
 }
 
 .pet-image
@@ -95,4 +83,23 @@
     border:solid 2px black;
     height:10vh;
     width:50vw
+}
+
+.pet-button
+{
+    border:solid 0.3vw orange;
+    border-radius:1vw;
+    background-color:red;
+    color:orange;
+    font-family:verdana;
+    font-size:2vw;
+    width:20vw;
+    cursor:pointer;
+}
+
+.pet-button:hover
+{
+    border-color:red;
+    background-color:orange;
+    color:red;
 }
