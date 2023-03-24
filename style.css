@@ -99,11 +99,54 @@ body, html
     width: 10vw
 }
 
+.pet-name
+{
+	background-color: transparent;
+	border: none;
+	font-family: verdana;
+	font-size: 3vh;
+	color: lightgreen;
+	text-shadow: -2px -2px green;
+}
+
 .pet-status
 {
     border: solid 2px black;
     height: 35vh;
     width: 50vw
+}
+
+.pet-bar 
+{
+    background-color: grey;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+    margin-bottom:3vh;
+}
+
+.pet-bar-status
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 0 px 5px 5px -6px #0546e0, 0 3px 7px #1172f9;
+    border-radius: 20px;
+    color: antiquewhite;
+    height: 100%;
+    width: 0;
+    transition: 1s ease 0.3s;
+}
+
+.pet-bar-health 
+{
+    background-color: red;
+}
+
+.pet-bar-hunger 
+{
+    background-color: green;
 }
 
 .pet-actions

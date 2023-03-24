@@ -2,8 +2,6 @@
 import Pet from "./pet.js";
 
 export default class Cat extends Pet {
-    hunger = 50;
-    energy = 50;
     huntDesire = 0;
 
     constructor(name) {
