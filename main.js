@@ -14,15 +14,30 @@ const petSelectDragon = document.getElementById("home-button-dragon");
 const petNameInput = document.getElementById("pet-name");
 const petNameSubmit = document.getElementById("pet-name-submit");
 
+const petActions = document.getElementById("pet-actions");
+
 let petSelection = "";
+const ignoreFuncs = ["constructor", "update", "toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "__defineGetter__", "__defineSetter__", "__lookupGetter__", "__lookupSetter__"];
+
+const tickLength = 10000;
+let ticker;
 
 homeScreen.hidden = false;
 petScreen.hidden = true;
 
-const tickLength = 10000;
+const getFunctions = (obj) => {
+    let properties = new Set();
+    let currentObj = obj;
+    do {
+        Object.getOwnPropertyNames(currentObj).map(item => properties.add(item));
+    } while ((currentObj = Object.getPrototypeOf(currentObj)));
+    return [...properties.keys()].filter(item => typeof obj[item] === 'function').filter(item => !ignoreFuncs.includes(item));
+}
 
 // game state object
 const gameState = {
+    petFunctions: [],
+
     initialise (petType, petName) {
         switch (petType) {
             case "Rock":
@@ -39,7 +54,22 @@ const gameState = {
         homeScreen.hidden = true;
         petScreen.hidden = false;
 
-        setInterval(this.tick(), tickLength);
+        this.petFunctions = getFunctions(this.pet);
+        this.petFunctions.forEach((func) => {
+            const newButton = document.createElement("button");
+            newButton.type = "button";
+            newButton.textContent = `${func}`;
+            newButton.classList.add("action-button");
+            newButton.id = `${func}-button`;
+
+            newButton.addEventListener("click", (event) => {
+                this.pet[`$func`];
+            });
+
+            petActions.appendChild(newButton);
+        });
+
+        ticker = setInterval(() => this.tick(), tickLength);
     },
 
     tick () {
@@ -88,4 +118,5 @@ homeButton.addEventListener("click", () => {
     homeScreen.hidden = false;
     petScreen.hidden = true;
     delete gameState.pet;
+    clearInterval(ticker);
 })

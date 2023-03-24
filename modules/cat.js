@@ -3,13 +3,15 @@ import Pet from "./pet.js";
 
 export default class Cat extends Pet {
     huntDesire = 0;
+
     constructor(name) {
         super(name);
     }
+
     update() {
         this.huntDesire -= 1;
-        console.log(this);
     }
+
     hunt() {
         if (this.huntDesire > 70) {
             this.diceRoll = Math.floor(Math.random() * 3) + 1;
