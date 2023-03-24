@@ -99,6 +99,16 @@ body, html
     width: 10vw
 }
 
+.pet-name
+{
+	background-color: transparent;
+	border: none;
+	font-family: verdana;
+	font-size: 3vh;
+	color: lightgreen;
+	text-shadow: -2px -2px green;
+}
+
 .pet-status
 {
     border: solid 2px black;
