@@ -3,14 +3,15 @@ import Pet from "./pet.js";
 
 export default class Rock extends Pet {
     moss = 0;
+    
     constructor(name) {
         super(name);
-
     }
+
     update() {
         this.moss += 1;
-        console.log(this);
     }
+
     play() {
         if (this.happiness < 80) {
             this.happiness += 20;
