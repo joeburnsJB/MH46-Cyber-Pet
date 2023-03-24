@@ -10,7 +10,6 @@ export default class Rock extends Pet {
 
     update() {
         this.moss += 1;
-        console.log(this);
     }
 
     play() {

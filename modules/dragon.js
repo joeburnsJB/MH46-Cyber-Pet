@@ -4,11 +4,11 @@ import Pet from "./pet.js";
 export default class Dragon extends Pet {
     greed = 0;
     anger = 0;
-    
+
     constructor(name) {
         super(name);
     }
-    
+
     update() {
         greedRoll = Math.floor(Math.random() * 2);
         this.greed += greedRoll;

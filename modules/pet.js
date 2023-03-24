@@ -92,6 +92,6 @@ export default class Pet {
         if (health === 0) {
             // call HTML element that tells player the game is over
         }
-        
+
     }
 }

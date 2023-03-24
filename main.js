@@ -17,12 +17,13 @@ const petNameSubmit = document.getElementById("pet-name-submit");
 const petActions = document.getElementById("pet-actions");
 
 let petSelection = "";
-
-homeScreen.hidden = false;
-petScreen.hidden = true;
+const ignoreFuncs = ["constructor", "update", "toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "__defineGetter__", "__defineSetter__", "__lookupGetter__", "__lookupSetter__"];
 
 const tickLength = 10000;
 let ticker;
+
+homeScreen.hidden = false;
+petScreen.hidden = true;
 
 const getFunctions = (obj) => {
     let properties = new Set();
@@ -30,13 +31,13 @@ const getFunctions = (obj) => {
     do {
         Object.getOwnPropertyNames(currentObj).map(item => properties.add(item));
     } while ((currentObj = Object.getPrototypeOf(currentObj)));
-    return [...properties.keys()].filter(item => typeof obj[item] === 'function');
+    return [...properties.keys()].filter(item => typeof obj[item] === 'function').filter(item => !ignoreFuncs.includes(item));
 }
 
 // game state object
 const gameState = {
     petFunctions: [],
-    
+
     initialise (petType, petName) {
         switch (petType) {
             case "Rock":
@@ -62,20 +63,16 @@ const gameState = {
             newButton.id = `${func}-button`;
 
             newButton.addEventListener("click", (event) => {
-                // code for calling the correct function here
-                console.log(`${func} test`);
+                this.pet[`$func`];
             });
 
             petActions.appendChild(newButton);
-
-            console.log(func);
         });
 
         ticker = setInterval(() => this.tick(), tickLength);
     },
 
     tick () {
-        console.log("tick");
         this.pet.update();
     }
 }
