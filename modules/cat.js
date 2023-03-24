@@ -8,7 +8,7 @@ export default class Cat extends Pet {
         super(name, petType);
     }
 
-    #petUpdate() {
+    petUpdate() {
         console.log("catting");
     }
 

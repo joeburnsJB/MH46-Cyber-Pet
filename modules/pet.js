@@ -57,10 +57,10 @@ export default class Pet {
 
         this.status(this.health.value, this.health.max, 'pet-health');
         this.status(this.hunger.value, this.hunger.max, 'pet-hunger');
-        this.#petUpdate();
+        this.petUpdate();
     }
 
-    #petUpdate() {
+    petUpdate() {
         // does nothing (on purpose);
     }
 

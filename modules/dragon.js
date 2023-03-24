@@ -9,7 +9,7 @@ export default class Dragon extends Pet {
         super(name, petType);
     }
 
-    #petUpdate() {
+    petUpdate() {
         console.log("dragonupdate");
     }
 

@@ -8,7 +8,7 @@ export default class Rock extends Pet {
         super(name, petType);
     }
 
-    #petUpdate() {
+    petUpdate() {
         this.moss += 1;
         console.log("petupdate");
     }

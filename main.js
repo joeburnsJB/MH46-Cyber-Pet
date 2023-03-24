@@ -17,7 +17,7 @@ const petNameSubmit = document.getElementById("pet-name-submit");
 const petActions = document.getElementById("pet-actions");
 
 let petSelection = "";
-const ignoreFuncs = ["constructor", "update", "toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "__defineGetter__", "__defineSetter__", "__lookupGetter__", "__lookupSetter__"];
+const ignoreFuncs = ["constructor", "update", "petUpdate", "toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "__defineGetter__", "__defineSetter__", "__lookupGetter__", "__lookupSetter__"];
 
 const tickLength = 1000;
 let ticker;
