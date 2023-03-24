@@ -130,3 +130,8 @@ body, html
     background-color: orange;
     color: red;
 }
+
+.action-button {
+    width: 5vw;
+    height: 2vh;
+}

@@ -27,7 +27,7 @@ export default class Pet {
             this.health -= 10;
         }
 
-        if (this.asleep = true) {
+        if (this.asleep === true) {
             this.hunger += (0.5 * this.hungerMod);
         } else {
             this.energy -= (1 * this.energyMod);
@@ -64,6 +64,11 @@ export default class Pet {
         // can put line here to change text in the HTML saying that the pet played
     }
 
+    clean() {
+        this.hygiene = 100;
+        this.poop = 0;
+    }
+
     #sleep() {
         this.asleep = true;
         document.getElementById("pet-image").src = this.sleepImg;
@@ -81,11 +86,6 @@ export default class Pet {
             this.poop++;
         }, (Math.floor((Math.random() * 20000) + 20000)));
 
-    }
-
-    clean() {
-        this.hygiene = 100;
-        this.poop = 0;
     }
 
     #kill() {

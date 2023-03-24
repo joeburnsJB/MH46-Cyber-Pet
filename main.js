@@ -14,15 +14,29 @@ const petSelectDragon = document.getElementById("home-button-dragon");
 const petNameInput = document.getElementById("pet-name");
 const petNameSubmit = document.getElementById("pet-name-submit");
 
+const petActions = document.getElementById("pet-actions");
+
 let petSelection = "";
 
 homeScreen.hidden = false;
 petScreen.hidden = true;
 
 const tickLength = 10000;
+let ticker;
+
+const getFunctions = (obj) => {
+    let properties = new Set();
+    let currentObj = obj;
+    do {
+        Object.getOwnPropertyNames(currentObj).map(item => properties.add(item));
+    } while ((currentObj = Object.getPrototypeOf(currentObj)));
+    return [...properties.keys()].filter(item => typeof obj[item] === 'function');
+}
 
 // game state object
 const gameState = {
+    petFunctions: [],
+    
     initialise (petType, petName) {
         switch (petType) {
             case "Rock":
@@ -36,16 +50,32 @@ const gameState = {
                 break;
         }
 
-        let petFunctions = Object.getOwnPropertyNames(Object.getPrototypeOf(this.pet));
-        console.log(petFunctions);
-
         homeScreen.hidden = true;
         petScreen.hidden = false;
 
-        setInterval(this.tick(), tickLength);
+        this.petFunctions = getFunctions(this.pet);
+        this.petFunctions.forEach((func) => {
+            const newButton = document.createElement("button");
+            newButton.type = "button";
+            newButton.value = `${func}`;
+            newButton.classList.add("action-button");
+            newButton.id = `${func}-button`;
+
+            newButton.addEventListener("click", (event) => {
+                // code for calling the correct function here
+                console.log(`${func} test`);
+            });
+
+            petActions.appendChild(newButton);
+
+            console.log(func);
+        });
+
+        ticker = setInterval(() => this.tick(), tickLength);
     },
 
     tick () {
+        console.log("tick");
         this.pet.update();
     }
 }
@@ -91,4 +121,5 @@ homeButton.addEventListener("click", () => {
     homeScreen.hidden = false;
     petScreen.hidden = true;
     delete gameState.pet;
+    clearInterval(ticker);
 })
