@@ -2,9 +2,10 @@
 import Pet from "./pet.js";
 
 export default class Rock extends Pet {
+    moss = 0;
     constructor(name) {
         super(name);
-        this.moss = 0;
+
     }
     update() {
         this.moss += 1;
