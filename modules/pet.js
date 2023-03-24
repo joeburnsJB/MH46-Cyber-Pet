@@ -46,9 +46,9 @@ export default class Pet {
         this.happinessCalc = 1 / this.hunger;
         this.happinessCalc = this.happinessCalc * 100;
         this.happiness -= (this.happinessCalc * this.happinessMod); */
-
-        document.getElementById('pet-name').value = this.name;
-
+        
+        document.getElementById('pet-status-name').textContent = this.name
+        
         // Update the status bar
         (this.health.value > 0) ? this.health.value -= 10 : this.health.value = this.health.max;
         (this.hunger.value > 0) ? this.hunger.value -= 5 : this.hunger.value = this.hunger.max;
