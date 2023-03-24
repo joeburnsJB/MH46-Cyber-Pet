@@ -2,11 +2,14 @@
 import Pet from "./pet.js";
 
 export default class Cat extends Pet {
+    huntDesire = 0;
+
     constructor(name) {
-        super(name, health, hunger, happiness, bond, energy, hygiene);
-        this.hunger = 50;
-        this.energy = 50;
-        this.huntDesire = 0;
+        super(name);
+    }
+
+    update() {
+        this.huntDesire -= 1;
     }
 
     hunt() {

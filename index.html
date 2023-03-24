@@ -6,25 +6,43 @@
     <title>Cyber Pet Challenge</title>
 </head>
 <body>
-    <div class="title">cyber pet challenge</div>
+    <div align="center"><img src="./images/title.png"></div>
 
-    <div id="home" class="home">
-        <div id="home-button-cat" class="home-button"><img src="./images/cat.png" alt="cat" class="home-image"></div>
-        <div id="home-button-rock"  class="home-button"><img src="./images/rock.png" alt="rock" class="home-image"></div>
-        <div id="home-button-dragon" class="home-button"><img src="./images/dragon.png" alt="dragon" class="home-image"></div>
+    <div id="home">
+        <div class="home">
+            <div id="home-button-rock"  class="home-button"><img src="./images/rock.png" alt="rock" class="home-image"></div>
+            <div id="home-button-cat" class="home-button"><img src="./images/cat.png" alt="cat" class="home-image"></div>
+            <div id="home-button-dragon" class="home-button"><img src="./images/dragonNS.png" alt="dragon" class="home-image"></div>
+        </div>
+        <div class="home-name-box">
+            <div class="home-name">
+                Please enter a name&nbsp;
+                <input id="pet-name" type="text">
+                <input id="pet-name-submit" type="button" value="submit">
+            </div>
+        </div>
     </div>
 
-    <div id="pet">
+
+    <div id="pet" hidden>
         <div class="pet">
             <div id="pet-speech" class="pet-speech">id:pet-speech</div>
             <div class="pet-box">
-                <div id="pet-image" class="pet-image"><img src="" alt="id:pet-image"></div>
+                <div class="pet-image"><img id="pet-image" src="" alt="id:pet-image"></div>
                 <div>
-                    <div id="pet-status" class="pet-status">id:pet-status</div>
-                    <div is="pet-actions" class="pet-actions">id:pet-actions</div>
+                    <div id="pet-status" class="pet-status">
+                        <div id="pet-status-name" class="pet-name">id:pet-name</div>
+                        <div class="pet-bar">
+                            <div id="pet-health" class="pet-bar-status pet-bar-health"></div>
+                        </div>
+                        <div class="pet-bar">
+                            <div id="pet-hunger" class="pet-bar-status pet-bar-hunger"></div>
+                        </div>
+                    </div>
+                    <div id="pet-actions" class="pet-actions">id:pet-actions</div>
                 </div>
             </div>
-            <div><input id="pet-button" type="button" value="home" class="pet-button"></div>
+            <div><input id="home-button" type="button" value="new pet" class="pet-button"></div>
         </div>
     </div>
 

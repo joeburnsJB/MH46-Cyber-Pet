@@ -2,9 +2,18 @@
 import Pet from "./pet.js";
 
 export default class Dragon extends Pet {
-    constructor() {
-        this.greed = 0;
-        this.anger = 0;
+    greed = 0;
+    anger = 0;
+
+    constructor(name) {
+        super(name);
+    }
+
+    update() {
+        greedRoll = Math.floor(Math.random() * 2);
+        this.greed += greedRoll;
+        angerRoll = Math.floor(Math.random() * 3);
+        this.anger += angerRoll;
     }
 
     hunt() {
