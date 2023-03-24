@@ -70,7 +70,6 @@ const gameState = {
         });
 
         ticker = setInterval(() => this.tick(), tickLength);
-        // setInterval(this.tick, tickLength);
     },
 
     tick () {
