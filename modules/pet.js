@@ -9,6 +9,9 @@ export default class Pet {
     poop = 0;
     recentlyAte = false;
 
+    defaultImg = "";
+    sleepImg = "";
+
     hungerMod = 1;
     happinessMod = 1;
     bondMod = 1;
@@ -63,9 +66,11 @@ export default class Pet {
 
     #sleep() {
         this.asleep = true;
+        document.getElementById("pet-image").src = this.sleepImg;
         setTimeout(() => {
             this.energy = 100;
             this.asleep = false;
+            document.getElementById("pet-image").src = this.defaultImg;
         }, (Math.floor((Math.random() * 30000) + 60000)));
     }
 
