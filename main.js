@@ -19,7 +19,7 @@ const petActions = document.getElementById("pet-actions");
 let petSelection = "";
 const ignoreFuncs = ["constructor", "update", "toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "__defineGetter__", "__defineSetter__", "__lookupGetter__", "__lookupSetter__"];
 
-const tickLength = 10000;
+const tickLength = 1000;
 let ticker;
 
 homeScreen.hidden = false;
@@ -41,13 +41,13 @@ const gameState = {
     initialise (petType, petName) {
         switch (petType) {
             case "Rock":
-                this.pet = new Rock(petName);
+                this.pet = new Rock(petName, "rock");
                 break;
             case "Cat":
-                this.pet = new Cat(petName);
+                this.pet = new Cat(petName, "cat");
                 break;
             case "Dragon":
-                this.pet = new Dragon(petName);
+                this.pet = new Dragon(petName, "dragon");
                 break;
         }
 
@@ -62,14 +62,15 @@ const gameState = {
             newButton.classList.add("action-button");
             newButton.id = `${func}-button`;
 
-            newButton.addEventListener("click", (event) => {
-                this.pet[`$func`];
+            newButton.addEventListener("click", () => {
+                this.pet[func]();
             });
 
             petActions.appendChild(newButton);
         });
 
         ticker = setInterval(() => this.tick(), tickLength);
+        // setInterval(this.tick, tickLength);
     },
 
     tick () {
@@ -117,6 +118,7 @@ petNameSubmit.addEventListener("click", () => {
 homeButton.addEventListener("click", () => {
     homeScreen.hidden = false;
     petScreen.hidden = true;
+    petActions.removeChildren();
     delete gameState.pet;
     clearInterval(ticker);
 })

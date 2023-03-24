@@ -5,15 +5,12 @@ export default class Dragon extends Pet {
     greed = 0;
     anger = 0;
 
-    constructor(name) {
-        super(name);
+    constructor(name, petType) {
+        super(name, petType);
     }
 
-    update() {
-        greedRoll = Math.floor(Math.random() * 2);
-        this.greed += greedRoll;
-        angerRoll = Math.floor(Math.random() * 3);
-        this.anger += angerRoll;
+    #petUpdate() {
+        console.log("dragonupdate");
     }
 
     hunt() {

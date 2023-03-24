@@ -8,6 +8,7 @@ export default class Pet {
     hygiene = 100;
     poop = 0;
     recentlyAte = false;
+    petType = "";
 
     defaultImg = "";
     sleepImg = "";
@@ -22,8 +23,9 @@ export default class Pet {
     recentlyAte = false;
     poop = false;
 
-    constructor(name) {
+    constructor(name, petType) {
         this.name = name;
+        this.petType = petType;
     }
 
     update() {
@@ -47,7 +49,7 @@ export default class Pet {
         this.happinessCalc = this.happinessCalc * 100;
         this.happiness -= (this.happinessCalc * this.happinessMod); */
         
-        document.getElementById('pet-status-name').textContent = this.name
+        document.getElementById('pet-status-name').textContent = this.name;
         
         // Update the status bar
         (this.health.value > 0) ? this.health.value -= 10 : this.health.value = this.health.max;
@@ -55,6 +57,11 @@ export default class Pet {
 
         this.status(this.health.value, this.health.max, 'pet-health');
         this.status(this.hunger.value, this.hunger.max, 'pet-hunger');
+        this.#petUpdate();
+    }
+
+    #petUpdate() {
+        // does nothing (on purpose);
     }
 
     eat() {
@@ -69,6 +76,7 @@ export default class Pet {
     }
 
     play() {
+        console.log("playing test");
         if (this.happiness < 80) {
             this.happiness += 20;
         } else {

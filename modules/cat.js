@@ -4,12 +4,12 @@ import Pet from "./pet.js";
 export default class Cat extends Pet {
     huntDesire = 0;
 
-    constructor(name) {
-        super(name);
+    constructor(name, petType) {
+        super(name, petType);
     }
 
-    update() {
-        this.huntDesire -= 1;
+    #petUpdate() {
+        console.log("catting");
     }
 
     hunt() {
