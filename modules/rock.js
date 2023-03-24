@@ -13,7 +13,6 @@ export default class Rock extends Pet {
         console.log("petupdate");
     }
 
-    // no generic functions in the pet subclasses please! this overrides the play function in pet.js which we don't want to do
     play() {
         if (this.happiness < 80) {
             this.happiness += 20;
@@ -23,7 +22,6 @@ export default class Rock extends Pet {
         }
         this.moss += 10;
         // can put line here to change text in the HTML saying that the pet was cleaned
-        console.log("playtest");
     }
 
     polish() {
