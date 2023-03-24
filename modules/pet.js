@@ -1,7 +1,9 @@
 export default class Pet {
     asleep = false;
+    /*
     health = 100;
     hunger = 0;
+    */
     happiness = 50;
     bond = 0;
     energy = 100;
@@ -12,6 +14,8 @@ export default class Pet {
     bondMod = 1;
     energyMod = 1;
     hygieneMod = 1;
+    health = {max:100, value:100}
+	hunger = {max:200, value:200}
     
     recentlyAte = false;
     poop = false;
@@ -21,6 +25,7 @@ export default class Pet {
     }
 
     update() {
+        /*
         if (this.hunger > 80 || this.hygiene < 20 || this.happiness < 20) {
             this.health -= 10;
         }
@@ -40,6 +45,14 @@ export default class Pet {
         this.happinessCalc = 1 / this.hunger;
         this.happinessCalc = this.happinessCalc * 100;
         this.happiness -= (this.happinessCalc * this.happinessMod);
+        */
+        document.getElementById('pet-name').value = this.name
+		
+        // Update the status bar
+        (this.health.value > 0) ? this.health.value -= 10 : this.health.value = this.health.max;
+		(this.hunger.value > 0) ? this.hunger.value -= 5 : this.hunger.value = this.hunger.max;
+        this.status(this.health.value, this.health.max, 'pet-health')
+		this.status(this.hunger.value, this.hunger.max, 'pet-hunger')
         console.log(this);
     }
 
@@ -93,4 +106,11 @@ export default class Pet {
         }
         
     }
+
+    status(value, max, name)
+	{
+    		const bar = document.getElementById(name);
+    		bar.style.width = `${(value / max * 100)}%`;
+    		bar.innerText = `${Math.ceil((value / max) * 100)}%`;
+	}
 }
