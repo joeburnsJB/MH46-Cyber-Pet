@@ -117,7 +117,7 @@ petNameSubmit.addEventListener("click", () => {
 homeButton.addEventListener("click", () => {
     homeScreen.hidden = false;
     petScreen.hidden = true;
-    petActions.removeChildren();
+    petActions.innerHTML = "";
     delete gameState.pet;
     clearInterval(ticker);
 })
