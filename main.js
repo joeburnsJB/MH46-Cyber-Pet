@@ -57,7 +57,7 @@ const gameState = {
         this.petFunctions.forEach((func) => {
             const newButton = document.createElement("button");
             newButton.type = "button";
-            newButton.value = `${func}`;
+            newButton.textContent = `${func}`;
             newButton.classList.add("action-button");
             newButton.id = `${func}-button`;
 
