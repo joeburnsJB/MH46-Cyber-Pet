@@ -32,18 +32,15 @@ export default class Pet {
         /* if (this.hunger > 80 || this.hygiene < 20 || this.happiness < 20) {
             this.health -= 10;
         }
-
         if (this.asleep === true) {
             this.hunger += (0.5 * this.hungerMod);
         } else {
             this.energy -= (1 * this.energyMod);
             this.hunger += (1 * this.hungerMod);
         }
-
         if (this.energy === 0) {
             this.#sleep();
         }
-
         this.hygene -= (1 * (this.hygieneMod * this.poop));
         this.happinessCalc = 1 / this.hunger;
         this.happinessCalc = this.happinessCalc * 100;
@@ -71,7 +68,7 @@ export default class Pet {
             this.hunger = 0;
         }
         // can put line here to change text in the HTML saying that the pet ate
-        // for example --->  petMessage.textContent = `${this.name} ate!)`;
+        document.getElementById('pet-speech').textContent = `${this.name} ate!`;
         this.recentlyAte = true;
     }
 
